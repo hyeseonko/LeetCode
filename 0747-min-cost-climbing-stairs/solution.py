@@ -4,4 +4,3 @@ class Solution:
         for val in cost[2:]:
             dp.append(val+min(dp[-1], dp[-2]))
         return min(dp[-1],dp[-2])
-        
