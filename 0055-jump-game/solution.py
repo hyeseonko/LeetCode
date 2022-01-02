@@ -12,4 +12,3 @@ class Solution:
                 dp[min(i+j, len_nums-1)]=True
                 
         return dp[-1]
-        
