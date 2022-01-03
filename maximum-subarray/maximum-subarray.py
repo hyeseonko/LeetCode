@@ -5,4 +5,3 @@ class Solution:
         for num in nums[1:]:
             dp.append(max(num, dp[-1]+num))
         return max(dp)
-        
