@@ -20,4 +20,3 @@ class Solution:
                 dp_minus.append(min(num, num*dp_plus[i]))
 
         return max(dp_plus)
-        
