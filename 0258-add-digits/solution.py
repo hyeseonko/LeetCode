@@ -5,4 +5,3 @@ class Solution:
             if len(output)==1:
                 return sum(output)
             output = [int(s) for s in str(sum(output))]
-            
