@@ -5,4 +5,3 @@ class Solution:
             for idx in range(row-1, 0, -1):
                 dp[idx]+=dp[idx-1]
         return dp
-        
