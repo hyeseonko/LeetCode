@@ -12,4 +12,3 @@ class Solution:
                     dp[row][col]=pow(int(sqrt(min_value))+1, 2)
 
         return max(map(max, dp))
-                    
