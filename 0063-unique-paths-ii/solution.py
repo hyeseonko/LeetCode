@@ -14,5 +14,3 @@ class Solution:
                 if j>0:
                     dp[i][j]+=dp[i][j-1]
         return dp[-1][-1]
-                    
-        
