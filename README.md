@@ -1,9 +1,9 @@
 # LeetCode
 LeetCode Problems & Solutions
 
-| # | Title | Solution | Difficulty |
+| # | Title | Solution | Basic Idea |
 |---| ----- | -------- | ---------- |
-|101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [Python](./101-symmetric-tree)|Easy|
+|101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [Python](./101-symmetric-tree)|-|
 
 
 
