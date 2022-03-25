@@ -1,10 +1,8 @@
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
         base = [(cost[0], 1) if cost[0]<cost[1] else (cost[1], -1) for cost in costs]
-        basesum, balanced = 0, 0
-        for v, b in base:
-            basesum += v
-            balanced += b
+        basesum = sum([v for v, _ in base])
+        balanced = sum([b for _, b in base])
         pass_over = balanced//2
         if pass_over==0:
             diff = 0
