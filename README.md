@@ -6,8 +6,6 @@ LeetCode Problems & Solutions
 |101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [Python](./101-symmetric-tree)|-|
 |102|x
 |103|x
-|104|x
-
 
 Categories: Dynamic Programming (DP), BFS, DFS, Math, Stack, Queue, Hash Table, Back Tracking, Graph
 
