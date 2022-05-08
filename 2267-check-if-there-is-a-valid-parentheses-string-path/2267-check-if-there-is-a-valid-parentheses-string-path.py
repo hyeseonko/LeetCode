@@ -1,61 +1,34 @@
 class Solution:
     def hasValidPath(self, grid: List[List[str]]) -> bool:
-        if grid[0][0] == ')':
-            return False
-        queue = deque([(0, 0, 1)])
-        visited = set([0, 0, 1])
-        while queue:
-            x, y, paran = queue.popleft()
-            if x == len(grid) - 1 and y == len(grid[0]) - 1 and paran == 0:
+        m, n = len(grid), len(grid[0])
+        
+        # Three quick failure cases
+        if grid[0][0]==")": return False
+        if grid[-1][-1]=="(": return False
+        if (m+n)%2==0: return False
+        
+        # Let's start!
+        queue=[(0,0,1)] # row, col, acc.sum (must be 0 at the destination); assuming that "("=1 and ")"=-1
+        visited=set()
+        visited.add((0,0,1))
+        while(queue):
+            row, col, acc_sum = queue.pop(0)
+            if row==m-1 and col==n-1 and acc_sum==0:
                 return True
-            for i, j in (1, 0), (0, 1):
-                x1, y1 = x + i, y + j
-                if 0 <= x1 < len(grid) and 0 <= y1 < len(grid[0]):
-                    new_paran = paran + (1 if grid[x1][y1] == '(' else -1)
-                    if (x1, y1, new_paran) in visited or new_paran < 0:
-                        continue
-                    visited.add((x1, y1, new_paran))
-                    queue.append((x1, y1, new_paran))
+            
+            # move down
+            if row < m-1:
+                next_item=1 if grid[row+1][col]=="(" else -1
+                next_sum = acc_sum+next_item
+                if next_sum>=0 and (row+1, col, next_sum) not in visited:
+                    queue.append((row+1, col, next_sum))
+                    visited.add((row+1, col, next_sum))
+            
+            # move right
+            if col < n-1:
+                next_item=1 if grid[row][col+1]=="(" else -1
+                next_sum = acc_sum+next_item
+                if next_sum>=0 and (row, col+1, next_sum) not in visited:
+                    queue.append((row, col+1, next_sum))
+                    visited.add((row, col+1, next_sum))
         return False
-
-# class Solution:
-#     def isValid(self, path) -> bool:
-#         # ['(', ')', '(', '(', ')', ')']
-#         stack=[path[0]]
-#         for p in path[1:]:
-#             if p=="(":
-#                 stack.append(p)
-#             else:
-#                 if stack and stack[-1]=="(":
-#                     stack.pop(-1)
-#                 else:
-#                     stack.append(p)
-#         return not stack
-        
-        
-#     def hasValidPath(self, grid: List[List[str]]) -> bool:
-#         m, n = len(grid), len(grid[0])
-#         if grid[0][0]==")": return False
-#         if grid[-1][-1]=="(": return False
-#         if (m+n-1)%2!=0: return False
-#         queue=[([grid[0][0]], 0, 0, 1, 0)]
-#         while queue:
-#             curpath, r, c, front_count, back_count = queue.pop(0)
-#             if r==m-1 and c==n-1:
-#                 if self.isValid(curpath):
-#                     return True
-#                 continue
-#             if front_count<back_count or front_count>(m+n-1)//2 or back_count>=(m+n-1)//2:
-#                 continue
-#             if r<m-1:
-#                 if grid[r+1][c]=="(":
-#                     queue.append((curpath+[grid[r+1][c]], r+1, c, front_count+1, back_count))
-#                 else:
-#                     queue.append((curpath+[grid[r+1][c]], r+1, c, front_count, back_count+1))
-#             if c<n-1:
-#                 if grid[r][c+1]=="(":
-#                     queue.append((curpath+[grid[r][c+1]], r, c+1, front_count+1, back_count))
-#                 else:
-#                     queue.append((curpath+[grid[r][c+1]], r, c+1, front_count, back_count+1))
-
-#         return False
