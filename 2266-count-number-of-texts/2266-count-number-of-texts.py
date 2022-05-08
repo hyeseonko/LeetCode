@@ -7,7 +7,7 @@ class Solution:
                 temp+=dp[-2]
                 if i>=2 and pressedKeys[i-2]==pkey:
                     temp+=dp[-3]
-                    if i>=3 and pkey in ["7", "9"] and pressedKeys[i-3]==pkey:
+                    if i>=3 and pkey in {"7", "9"} and pressedKeys[i-3]==pkey:
                         temp+=dp[-4]
             dp.append(temp)
         return dp[-1]%1000000007
