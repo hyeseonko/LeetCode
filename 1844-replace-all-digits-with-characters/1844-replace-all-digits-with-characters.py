@@ -1,5 +1,3 @@
-import string
-
 class Solution:
     def replaceDigits(self, s: str) -> str:
         letter_count = dict((letter, i) for i, letter in enumerate(string.ascii_lowercase))
