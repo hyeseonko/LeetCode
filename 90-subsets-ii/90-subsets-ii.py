@@ -5,6 +5,5 @@ class Solution:
             result += [i+[num] for i in result]
         result2=set()
         for res in result:
-            target = tuple(sorted(res))
-            result2.add(target)
+            result2.add(tuple(sorted(res)))
         return result2
