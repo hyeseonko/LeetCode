@@ -1,7 +1,7 @@
 # LeetCode
 LeetCode Problems & Solutions
    
-| # | Title | Solution | Basic Idea |
+| # | Title | Solution | Basic Idea | 
 |---| ----- | -------- | ---------- |
 |101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [Python](./101-symmetric-tree)|-|
 |102|x
