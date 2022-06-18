@@ -1,6 +1,9 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        result = [[]]
+        # method 1. cascading
+        output = [[]]
+        
         for num in nums:
-            result += [i + [num] for i in result]
-        return result
+            output += [o + [num] for o in output]
+        
+        return output
