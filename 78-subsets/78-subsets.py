@@ -18,6 +18,5 @@ class Solution:
                 curr.pop()
         output = []
         n = len(nums)
-        # for k in range(n+1):
         backtrack()
         return output
