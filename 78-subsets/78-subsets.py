@@ -8,9 +8,7 @@ class Solution:
         
         # method 2. backtracking
         def backtrack(first=0, curr=[]):
-            if len(curr)==k:
-                output.append(curr[:])
-                return
+            output.append(curr[:])
             for i in range(first, n):
                 # step 1. add nums[i] to curr
                 curr.append(nums[i])
@@ -20,7 +18,6 @@ class Solution:
                 curr.pop()
         output = []
         n = len(nums)
-        for k in range(n+1):
-            backtrack()
-            
+        # for k in range(n+1):
+        backtrack()
         return output
