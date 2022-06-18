@@ -16,6 +16,6 @@ class Solution:
         # backtrack([], 1)
         # return output
         
-        # method 2. python function
+        # method 2. python function - combinations
         from itertools import combinations
         return list(combinations(range(1, n+1), k))
