@@ -4,6 +4,7 @@ LeetCode Problems & Solutions
 | # | Title | Solution | Topic | Basic Idea | 
 |---| ----- | -------- | ------| ---------- |
 |1 | [Two Sum](https://github.com/hyeseonko/LeetCode/tree/main/1-two-sum) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/1-two-sum/1-two-sum.py) | `Array`, `Hash Table` | **HashTable**: While scanning through the array, wait for the `target - x` using hash map
+|15 | [3Sum](https://github.com/hyeseonko/LeetCode/tree/main/15-3sum) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/15-3sum/15-3sum.py) | `Two Pointers`, `Sorting` | 4 Cases exist: [0,0,0], [0,p,-p], [p1,p2,-(p1+p2)], [n1, n2, -(n1+n2)]
 |46 | [Permutations](https://github.com/hyeseonko/LeetCode/tree/main/46-permutations) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/46-permutations/46-permutations.py) | `Backtracking` | **Backtrack**: Add nums[i] -> Go next -> Pop nums[i] with visited flag
 |62 | [Unique Paths](https://github.com/hyeseonko/LeetCode/tree/main/62-unique-paths) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/62-unique-paths/62-unique-paths.py) | `Combinatorics`, `DP` | **Combinatorics**: (m+n-2)_C_(m-1), **DP**: dp[i][j]=dp[i-1][j]+dp[i][j-1] 
 |77 | [Combinations](https://github.com/hyeseonko/LeetCode/tree/main/77-combinations) | [Python]() | `Backtracking` | **Backtrack**: Add i -> Go next -> Backtrack (=pop i)
