@@ -1,11 +1,3 @@
 class Solution:
     def isPowerOfFour(self, n: int) -> bool:
-        if n<1:
-            return False
-        while(n>1):
-            if n%4!=0:
-                return False
-            else:
-                n/=4
-        return True
-        
+        return n>0 and str(round(math.log(n, 4), 10)).split(".")[-1]=="0"
