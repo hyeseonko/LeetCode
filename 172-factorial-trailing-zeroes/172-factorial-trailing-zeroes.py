@@ -9,9 +9,6 @@ class Solution:
             x *= 5
         return output
         
-        
-        return output
-        
         # method 1. DP O(N)
         # dp = [0,0,0,0,0]
         # for num in range(5, n+1):
