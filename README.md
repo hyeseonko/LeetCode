@@ -40,6 +40,10 @@ Categories: Dynamic Programming (DP), BFS, DFS, Math, Stack, Queue, Hash Table, 
 3. BFS:
 4. DFS:
 
+## Tips
+- index vs find
+
+
 ### Reference
 - [LeetHub: Linking GitHub and LeetCode](https://github.com/QasimWani/LeetHub)
  
