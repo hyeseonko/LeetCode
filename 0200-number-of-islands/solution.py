@@ -1,36 +1,50 @@
 class Solution:
-    def bfs(self, row: int, col: int) -> None:
-        stack=[(row, col)]
-        while(stack):
-            cur_row, cur_col = stack.pop(0)
-            if cur_row<self.m-1 and not self.visited[cur_row+1][cur_col] and self.grid[cur_row+1][cur_col]=="1":
-                stack.append((cur_row+1, cur_col))
-                self.visited[cur_row+1][cur_col]=True
-            if cur_col<self.n-1 and not self.visited[cur_row][cur_col+1] and self.grid[cur_row][cur_col+1]=="1":
-                stack.append((cur_row, cur_col+1))
-                self.visited[cur_row][cur_col+1]=True
-            if cur_col>0 and not self.visited[cur_row][cur_col-1] and self.grid[cur_row][cur_col-1]=="1":
-                stack.append((cur_row, cur_col-1))
-                self.visited[cur_row][cur_col-1]=True
-            if cur_row>0 and not self.visited[cur_row-1][cur_col] and self.grid[cur_row-1][cur_col]=="1":
-                stack.append((cur_row-1, cur_col))
-                self.visited[cur_row-1][cur_col]=True    
+    # method 1. DFS (recursive) without using visited
+    def dfs(self, x, y):
+        # exit condition
+        if not (x in range(self.m) and y in range(self.n)) or self.grid[x][y]=="0":
+            return
+        # proceed
+        self.grid[x][y]="0"
+        self.dfs(x+1, y)
+        self.dfs(x, y+1)
+        self.dfs(x, y-1)
+        self.dfs(x-1, y)
         
     def numIslands(self, grid: List[List[str]]) -> int:
-        self.m = len(grid)
-        self.n = len(grid[0])
+        output = 0
         self.grid = grid
-        islands=0
-        self.visited=[[False for _ in range(self.n)] for _ in range(self.m)]
-        for row in range(self.m):
-            for col in range(self.n):
-                if not self.visited[row][col] and grid[row][col]=="1":
-                    self.visited[row][col]=True
-                    self.bfs(row, col)
-                    islands+=1
-        
-        return islands
-                    
-            
-        
+        self.m, self.n = len(grid), len(grid[0])
+        for i in range(self.m):
+            for j in range(self.n):
+                if grid[i][j]=="1":
+                    self.dfs(i, j)
+                    output+=1
+        return output
+
+    # method 2. BFS (queue)
+#     def bfs(self, x, y):
+#         queue = [(x, y)]
+#         self.grid[x][y]=="0"
+#         dx = [0, 0, 1, -1]
+#         dy = [1, -1, 0, 0]
+#         while queue:
+#             curx, cury = queue.pop(0)
+#             for i in range(4):
+#                 nextx, nexty = curx + dx[i], cury + dy[i]
+#                 if nextx in range(self.m) and nexty in range(self.n) and self.grid[nextx][nexty]=="1":
+#                     queue.append((nextx, nexty))
+#                     self.grid[nextx][nexty]="0"
+
+#     def numIslands(self, grid: List[List[str]]) -> int:
+#         output = 0
+#         self.grid = grid
+#         self.m, self.n = len(grid), len(grid[0])
+#         for i in range(self.m):
+#             for j in range(self.n):
+#                 if grid[i][j]=="1":
+#                     self.bfs(i, j)
+#                     output+=1
+#         return output
+
         
