@@ -1,11 +1,7 @@
 class Solution:
     def isPowerOfThree(self, n: int) -> bool:
-        if n<=0:
-            return False
-        while(n>1):
-            if n%3==0:
-                n/=3
-            else:
-                return False
-        return True
+        # log
+        # return str(round(math.log(n, 3), 10)).split(".")[-1]=='0' if n>0 else False
         
+        # number theory
+        return n>0 and not 3**19 % n
