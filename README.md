@@ -17,7 +17,7 @@ LeetCode Problems & Solutions
 |322 | [Coin Change](https://github.com/hyeseonko/LeetCode/tree/main/322-coin-change) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/322-coin-change/322-coin-change.py) | `DP`, `BFS` | **DP**: dp[i]=min(dp[i-coins[0]], dp[i-coins[1]], dp[i-coins[2]], ... )+1
 |518 | [Coin Change 2](https://github.com/hyeseonko/LeetCode/tree/main/518-coin-change-2) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/518-coin-change-2/518-coin-change-2.py) | `DP` | **DP**: dp[i]+=dp[i-coin] (Key idea: For-loop-coin-first-then-amount)
 |1200 | [Minimum Absolute Difference](https://github.com/hyeseonko/LeetCode/tree/main/1200-minimum-absolute-difference) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/1200-minimum-absolute-difference/1200-minimum-absolute-difference.py) | `Sorting` | Sort and find the min with zip (arr, arr[1:])
-
+|1268 | [Search Suggestions System](https://github.com/hyeseonko/LeetCode/tree/main/1268-search-suggestions-system) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/1268-search-suggestions-system/1268-search-suggestions-system.py) | `Trie`, `BinarySearch` | **BinarySearch**: sort and bisect_left **Trie**: (TBD)
 
 
 Categories: Dynamic Programming (DP), BFS, DFS, Math, Stack, Queue, Hash Table, Back Tracking, Graph
