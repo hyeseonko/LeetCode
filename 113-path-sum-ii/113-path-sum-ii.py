@@ -6,6 +6,8 @@
 #         self.right = right
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
+                
+        # method 1. BFS (queue)
         if not root:
             return []
         output=[]
