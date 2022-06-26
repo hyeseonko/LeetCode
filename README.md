@@ -1,5 +1,5 @@
 # LeetCode
-LeetCode Problems & Solutions.  
+LeetCode Problems & Solutions.   
    
 | # | Title | Solution | Topic | Basic Idea | 
 |---| ----- | -------- | ------| ---------- |
@@ -45,7 +45,8 @@ Categories: Dynamic Programming (DP), BFS, DFS, Math, Stack, Queue, Hash Table, 
 
 ## Tips
 - index vs find
-
+- what
+    
 
 ### Reference
 - [LeetHub: Linking GitHub and LeetCode](https://github.com/QasimWani/LeetHub)
