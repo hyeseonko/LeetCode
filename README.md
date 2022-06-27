@@ -45,7 +45,7 @@ Categories: Dynamic Programming (DP), BFS, DFS, Math, Stack, Queue, Hash Table, 
 
 ## Tips
 - index vs find
-- what
+- set vs list
     
 
 ### Reference
