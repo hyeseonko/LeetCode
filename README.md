@@ -1,5 +1,5 @@
 # LeetCode
-LeetCode Problems & Solutions
+LeetCode Problems & Solutions.  
    
 | # | Title | Solution | Topic | Basic Idea | 
 |---| ----- | -------- | ------| ---------- |
