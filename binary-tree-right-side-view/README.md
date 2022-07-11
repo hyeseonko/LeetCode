@@ -1,3 +1,4 @@
+[Discussion Post (created on 11/6/2022 at 15:58)](https://leetcode.com/problems/binary-tree-right-side-view/discuss/2266847/Python-oror-using-BFS-oror-simple-and-clean)  
 <h2>199. Binary Tree Right Side View</h2><h3>Medium</h3><hr><div><p>Given the <code>root</code> of a binary tree, imagine yourself standing on the <strong>right side</strong> of it, return <em>the values of the nodes you can see ordered from top to bottom</em>.</p>
 
 <p>&nbsp;</p>
