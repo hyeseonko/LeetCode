@@ -5,22 +5,24 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    # method 1. BFS
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        output, queue = [], []
         if not root:
-            return []
-        output=[]
-        stack=[(root,0)]
-        prev_depth=0
-        while(stack):
-            node, depth = stack.pop(0)
-            if depth!=prev_depth:
-                output.append(prev_node.val)
-            if node.left:
-                stack.append((node.left, depth+1))
-            if node.right:
-                stack.append((node.right, depth+1))
-            prev_depth=depth
-            prev_node=node
-        output.append(prev_node.val)
-        return output
+            return output
         
+        queue = [(root, 0)] # node, level
+        val = root.val
+        prev_level = 0
+        while queue:
+            cur, cur_level = queue.pop(0)
+            if cur_level!=prev_level:
+                output.append(val)
+            if cur.left:
+                queue.append((cur.left, cur_level+1))
+            if cur.right:
+                queue.append((cur.right, cur_level+1))
+            prev_level = cur_level
+            val = cur.val
+        output.append(val)
+        return output
