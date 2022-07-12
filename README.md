@@ -1,6 +1,6 @@
 # LeetCode     
 LeetCode Problems & Solutions.        
-   
+    
 | # | Title | Solution | Topic | Basic Idea | 
 |---| ----- | -------- | ------| ---------- | 
 |1 | [Two Sum](https://github.com/hyeseonko/LeetCode/tree/main/1-two-sum) | [Python](https://github.com/hyeseonko/LeetCode/blob/main/1-two-sum/1-two-sum.py) | `Array`, `Hash Table` | **HashTable**: While scanning through the array, wait for the `target - x` using hash map
