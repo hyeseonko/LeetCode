@@ -4,16 +4,17 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if not root:
-            return 0
-        stack=[(root, 1)]
-        while(stack):
-            cur, cur_depth = stack.pop(0)
+        output = 0
+        if not root: return 0
+        q = [(root, 1)]
+        while q:
+            cur, level = q.pop(0)
             if cur.left:
-                stack.append((cur.left, cur_depth+1))
+                q.append((cur.left, level+1))
             if cur.right:
-                stack.append((cur.right, cur_depth+1))
-        return cur_depth
+                q.append((cur.right, level+1))
+            output = level
+        return output
+            
