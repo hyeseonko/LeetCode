@@ -7,8 +7,7 @@
 
 class Solution:
     def guessNumber(self, n: int) -> int:
-        start = 1
-        end = n
+        start, end = 1, n
         while(1):
             cur = (start+end)//2
             ans = guess(cur)
