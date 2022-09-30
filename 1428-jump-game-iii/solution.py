@@ -1,13 +1,13 @@
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
         
-        # method 2. Recursive
+        # method 1. Recursive
         if 0<=start<len(arr) and arr[start]>=0:
             arr[start]=-arr[start] # visited flag
             return arr[start]==0 or self.canReach(arr, start+arr[start]) or self.canReach(arr, start-arr[start])
         return False
         
-        # method 1. BFS
+        # method 2. BFS
         # queue = [start]
         # length = len(arr)
         # while queue:
