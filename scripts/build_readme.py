@@ -17,12 +17,19 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
+import urllib.error
+import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 STATS_JSON = ROOT / "stats.json"
+# The sync tool writes only the question body, with no title or difficulty in it,
+# so that metadata is fetched once from LeetCode and cached here rather than
+# re-requested on every build.
+METADATA_JSON = ROOT / "problem-meta.json"
 
 SKIP_DIRS = {".git", ".github", "scripts"}
 # The statement's title heading, with or without the LeetCode anchor -- the older
@@ -42,11 +49,47 @@ class Problem:
     title: str
     url: str
     difficulty: str = "—"
+    slug: str = ""
     solutions: list[Path] = field(default_factory=list)
     notes: list[Path] = field(default_factory=list)
 
     def languages(self) -> list[str]:
         return sorted({LANGUAGES.get(path.suffix, path.suffix.lstrip(".")) for path in self.solutions})
+
+
+def load_metadata() -> dict:
+    try:
+        return json.loads(METADATA_JSON.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def fetch_metadata(slug: str) -> dict | None:
+    """Title and difficulty from LeetCode's public API. No auth needed."""
+    body = json.dumps(
+        {
+            "query": "query q($s:String!){question(titleSlug:$s)"
+            "{questionFrontendId title difficulty}}",
+            "variables": {"s": slug},
+        }
+    ).encode()
+    request = urllib.request.Request(
+        "https://leetcode.com/graphql",
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "Referer": "https://leetcode.com",
+            "User-Agent": "hyeseonko-leetcode-index",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            question = json.load(response)["data"]["question"]
+        if not question:
+            return None
+        return {"title": question["title"], "difficulty": question["difficulty"]}
+    except (urllib.error.URLError, TimeoutError, ValueError, KeyError, TypeError):
+        return None
 
 
 def _has_notes(path: Path) -> bool:
@@ -86,6 +129,8 @@ def scan() -> list[Problem]:
         problem = problems.setdefault(number, Problem(number, title, url))
         if difficulty_match:
             problem.difficulty = difficulty_match.group(1)
+        if dir_match and not problem.slug:
+            problem.slug = dir_match.group(2)
         problem.solutions += [
             path
             for path in sorted(directory.iterdir())
@@ -157,8 +202,39 @@ def replace(text: str, name: str, body: str) -> str:
     return pattern.sub(lambda match: f"{match.group(1)}\n{body}\n{match.group(3)}", text)
 
 
+def fill_metadata(problems: list[Problem]) -> None:
+    """Fill in whatever the statements did not carry, caching every lookup.
+
+    Only problems still missing a difficulty are requested, so the first run after
+    a large sync pays the cost once and later runs are offline.
+    """
+    cache = load_metadata()
+    fetched = 0
+    for problem in problems:
+        if problem.difficulty != "—" or not problem.slug:
+            continue
+        # The sync tool occasionally emits a doubled hyphen (`2349--check-...`),
+        # leaving a leading hyphen on the slug that LeetCode does not recognize.
+        slug = problem.slug.strip("-")
+        entry = cache.get(slug)
+        if entry is None:
+            entry = fetch_metadata(slug)
+            if entry is None:
+                continue
+            cache[slug] = entry
+            fetched += 1
+            time.sleep(0.3)  # be a polite client
+        problem.difficulty = entry["difficulty"]
+        if entry.get("title"):
+            problem.title = entry["title"]
+    if fetched:
+        METADATA_JSON.write_text(json.dumps(cache, indent=2, sort_keys=True) + "\n")
+        print(f"fetched metadata for {fetched} problem(s)")
+
+
 def main() -> None:
     problems = scan()
+    fill_metadata(problems)
     stats = tally(problems)
 
     text = README.read_text()

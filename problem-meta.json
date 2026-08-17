@@ -1,0 +1,814 @@
+{
+  "a-number-after-a-double-reversal": {
+    "difficulty": "Easy",
+    "title": "A Number After a Double Reversal"
+  },
+  "actors-and-directors-who-cooperated-at-least-three-times": {
+    "difficulty": "Easy",
+    "title": "Actors and Directors Who Cooperated At Least Three Times"
+  },
+  "add-two-integers": {
+    "difficulty": "Easy",
+    "title": "Add Two Integers"
+  },
+  "article-views-i": {
+    "difficulty": "Easy",
+    "title": "Article Views I"
+  },
+  "average-salary-excluding-the-minimum-and-maximum-salary": {
+    "difficulty": "Easy",
+    "title": "Average Salary Excluding the Minimum and Maximum Salary"
+  },
+  "backspace-string-compare": {
+    "difficulty": "Easy",
+    "title": "Backspace String Compare"
+  },
+  "bank-account-summary-ii": {
+    "difficulty": "Easy",
+    "title": "Bank Account Summary II"
+  },
+  "best-sightseeing-pair": {
+    "difficulty": "Medium",
+    "title": "Best Sightseeing Pair"
+  },
+  "binary-gap": {
+    "difficulty": "Easy",
+    "title": "Binary Gap"
+  },
+  "binary-prefix-divisible-by-5": {
+    "difficulty": "Easy",
+    "title": "Binary Prefix Divisible By 5"
+  },
+  "binary-search": {
+    "difficulty": "Easy",
+    "title": "Binary Search"
+  },
+  "build-an-array-with-stack-operations": {
+    "difficulty": "Medium",
+    "title": "Build an Array With Stack Operations"
+  },
+  "build-array-from-permutation": {
+    "difficulty": "Easy",
+    "title": "Build Array from Permutation"
+  },
+  "calculate-special-bonus": {
+    "difficulty": "Easy",
+    "title": "Calculate Special Bonus"
+  },
+  "can-make-arithmetic-progression-from-sequence": {
+    "difficulty": "Easy",
+    "title": "Can Make Arithmetic Progression From Sequence"
+  },
+  "cells-in-a-range-on-an-excel-sheet": {
+    "difficulty": "Easy",
+    "title": "Cells in a Range on an Excel Sheet"
+  },
+  "cells-with-odd-values-in-a-matrix": {
+    "difficulty": "Easy",
+    "title": "Cells with Odd Values in a Matrix"
+  },
+  "check-if-a-string-contains-all-binary-codes-of-size-k": {
+    "difficulty": "Medium",
+    "title": "Check If a String Contains All Binary Codes of Size K"
+  },
+  "check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence": {
+    "difficulty": "Easy",
+    "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence"
+  },
+  "check-if-all-as-appears-before-all-bs": {
+    "difficulty": "Easy",
+    "title": "Check if All A's Appears Before All B's"
+  },
+  "check-if-every-row-and-column-contains-all-numbers": {
+    "difficulty": "Easy",
+    "title": "Check if Every Row and Column Contains All Numbers"
+  },
+  "check-if-it-is-a-straight-line": {
+    "difficulty": "Easy",
+    "title": "Check If It Is a Straight Line"
+  },
+  "check-if-number-has-equal-digit-count-and-digit-value": {
+    "difficulty": "Easy",
+    "title": "Check if Number Has Equal Digit Count and Digit Value"
+  },
+  "check-if-numbers-are-ascending-in-a-sentence": {
+    "difficulty": "Easy",
+    "title": "Check if Numbers Are Ascending in a Sentence"
+  },
+  "check-if-one-string-swap-can-make-strings-equal": {
+    "difficulty": "Easy",
+    "title": "Check if One String Swap Can Make Strings Equal"
+  },
+  "check-if-the-sentence-is-pangram": {
+    "difficulty": "Easy",
+    "title": "Check if the Sentence Is Pangram"
+  },
+  "check-if-there-is-a-valid-parentheses-string-path": {
+    "difficulty": "Hard",
+    "title": " Check if There Is a Valid Parentheses String Path"
+  },
+  "check-if-two-string-arrays-are-equivalent": {
+    "difficulty": "Easy",
+    "title": "Check If Two String Arrays are Equivalent"
+  },
+  "check-if-word-equals-summation-of-two-words": {
+    "difficulty": "Easy",
+    "title": "Check if Word Equals Summation of Two Words"
+  },
+  "complement-of-base-10-integer": {
+    "difficulty": "Easy",
+    "title": "Complement of Base 10 Integer"
+  },
+  "concatenation-of-array": {
+    "difficulty": "Easy",
+    "title": "Concatenation of Array"
+  },
+  "consecutive-characters": {
+    "difficulty": "Easy",
+    "title": "Consecutive Characters"
+  },
+  "convert-binary-number-in-a-linked-list-to-integer": {
+    "difficulty": "Easy",
+    "title": "Convert Binary Number in a Linked List to Integer"
+  },
+  "convert-the-temperature": {
+    "difficulty": "Easy",
+    "title": "Convert the Temperature"
+  },
+  "count-common-words-with-one-occurrence": {
+    "difficulty": "Easy",
+    "title": "Count Common Words With One Occurrence"
+  },
+  "count-equal-and-divisible-pairs-in-an-array": {
+    "difficulty": "Easy",
+    "title": "Count Equal and Divisible Pairs in an Array"
+  },
+  "count-good-nodes-in-binary-tree": {
+    "difficulty": "Medium",
+    "title": "Count Good Nodes in Binary Tree"
+  },
+  "count-integers-with-even-digit-sum": {
+    "difficulty": "Easy",
+    "title": "Count Integers With Even Digit Sum"
+  },
+  "count-items-matching-a-rule": {
+    "difficulty": "Easy",
+    "title": "Count Items Matching a Rule"
+  },
+  "count-largest-group": {
+    "difficulty": "Easy",
+    "title": "Count Largest Group"
+  },
+  "count-negative-numbers-in-a-sorted-matrix": {
+    "difficulty": "Easy",
+    "title": "Count Negative Numbers in a Sorted Matrix"
+  },
+  "count-nodes-equal-to-average-of-subtree": {
+    "difficulty": "Medium",
+    "title": "Count Nodes Equal to Average of Subtree"
+  },
+  "count-number-of-pairs-with-absolute-difference-k": {
+    "difficulty": "Easy",
+    "title": "Count Number of Pairs With Absolute Difference K"
+  },
+  "count-number-of-texts": {
+    "difficulty": "Medium",
+    "title": "Count Number of Texts"
+  },
+  "count-odd-numbers-in-an-interval-range": {
+    "difficulty": "Easy",
+    "title": "Count Odd Numbers in an Interval Range"
+  },
+  "count-of-matches-in-tournament": {
+    "difficulty": "Easy",
+    "title": "Count of Matches in Tournament"
+  },
+  "count-operations-to-obtain-zero": {
+    "difficulty": "Easy",
+    "title": "Count Operations to Obtain Zero"
+  },
+  "count-sorted-vowel-strings": {
+    "difficulty": "Medium",
+    "title": "Count Sorted Vowel Strings"
+  },
+  "count-square-submatrices-with-all-ones": {
+    "difficulty": "Medium",
+    "title": "Count Square Submatrices with All Ones"
+  },
+  "count-square-sum-triples": {
+    "difficulty": "Easy",
+    "title": "Count Square Sum Triples"
+  },
+  "count-the-number-of-consistent-strings": {
+    "difficulty": "Easy",
+    "title": "Count the Number of Consistent Strings"
+  },
+  "count-vowel-substrings-of-a-string": {
+    "difficulty": "Easy",
+    "title": "Count Vowel Substrings of a String"
+  },
+  "counting-words-with-a-given-prefix": {
+    "difficulty": "Easy",
+    "title": "Counting Words With a Given Prefix"
+  },
+  "cousins-in-binary-tree": {
+    "difficulty": "Easy",
+    "title": "Cousins in Binary Tree"
+  },
+  "create-target-array-in-the-given-order": {
+    "difficulty": "Easy",
+    "title": "Create Target Array in the Given Order"
+  },
+  "customer-who-visited-but-did-not-make-any-transactions": {
+    "difficulty": "Easy",
+    "title": "Customer Who Visited but Did Not Make Any Transactions"
+  },
+  "decode-the-message": {
+    "difficulty": "Easy",
+    "title": "Decode the Message"
+  },
+  "decompress-run-length-encoded-list": {
+    "difficulty": "Easy",
+    "title": "Decompress Run-Length Encoded List"
+  },
+  "decrypt-string-from-alphabet-to-integer-mapping": {
+    "difficulty": "Easy",
+    "title": "Decrypt String from Alphabet to Integer Mapping"
+  },
+  "defanging-an-ip-address": {
+    "difficulty": "Easy",
+    "title": "Defanging an IP Address"
+  },
+  "design-parking-system": {
+    "difficulty": "Easy",
+    "title": "Design Parking System"
+  },
+  "destination-city": {
+    "difficulty": "Easy",
+    "title": "Destination City"
+  },
+  "determine-if-string-halves-are-alike": {
+    "difficulty": "Easy",
+    "title": "Determine if String Halves Are Alike"
+  },
+  "di-string-match": {
+    "difficulty": "Easy",
+    "title": "DI String Match"
+  },
+  "divide-array-into-equal-pairs": {
+    "difficulty": "Easy",
+    "title": "Divide Array Into Equal Pairs"
+  },
+  "employees-with-missing-information": {
+    "difficulty": "Easy",
+    "title": "Employees With Missing Information"
+  },
+  "equal-row-and-column-pairs": {
+    "difficulty": "Medium",
+    "title": "Equal Row and Column Pairs"
+  },
+  "even-odd-tree": {
+    "difficulty": "Medium",
+    "title": "Even Odd Tree"
+  },
+  "fibonacci-number": {
+    "difficulty": "Easy",
+    "title": "Fibonacci Number"
+  },
+  "final-prices-with-a-special-discount-in-a-shop": {
+    "difficulty": "Easy",
+    "title": "Final Prices With a Special Discount in a Shop"
+  },
+  "final-value-of-variable-after-performing-operations": {
+    "difficulty": "Easy",
+    "title": "Final Value of Variable After Performing Operations"
+  },
+  "find-and-replace-pattern": {
+    "difficulty": "Medium",
+    "title": "Find and Replace Pattern"
+  },
+  "find-common-characters": {
+    "difficulty": "Easy",
+    "title": "Find Common Characters"
+  },
+  "find-first-palindromic-string-in-the-array": {
+    "difficulty": "Easy",
+    "title": "Find First Palindromic String in the Array"
+  },
+  "find-greatest-common-divisor-of-array": {
+    "difficulty": "Easy",
+    "title": "Find Greatest Common Divisor of Array"
+  },
+  "find-n-unique-integers-sum-up-to-zero": {
+    "difficulty": "Easy",
+    "title": "Find N Unique Integers Sum up to Zero"
+  },
+  "find-nearest-point-that-has-the-same-x-or-y-coordinate": {
+    "difficulty": "Easy",
+    "title": "Find Nearest Point That Has the Same X or Y Coordinate"
+  },
+  "find-numbers-with-even-number-of-digits": {
+    "difficulty": "Easy",
+    "title": "Find Numbers with Even Number of Digits"
+  },
+  "find-target-indices-after-sorting-array": {
+    "difficulty": "Easy",
+    "title": "Find Target Indices After Sorting Array"
+  },
+  "find-the-difference-of-two-arrays": {
+    "difficulty": "Easy",
+    "title": "Find the Difference of Two Arrays"
+  },
+  "find-the-distance-value-between-two-arrays": {
+    "difficulty": "Easy",
+    "title": "Find the Distance Value Between Two Arrays"
+  },
+  "find-the-highest-altitude": {
+    "difficulty": "Easy",
+    "title": "Find the Highest Altitude"
+  },
+  "find-the-k-beauty-of-a-number": {
+    "difficulty": "Easy",
+    "title": "Find the K-Beauty of a Number"
+  },
+  "find-total-time-spent-by-each-employee": {
+    "difficulty": "Easy",
+    "title": "Find Total Time Spent by Each Employee"
+  },
+  "find-triangular-sum-of-an-array": {
+    "difficulty": "Medium",
+    "title": "Find Triangular Sum of an Array"
+  },
+  "find-valid-matrix-given-row-and-column-sums": {
+    "difficulty": "Medium",
+    "title": "Find Valid Matrix Given Row and Column Sums"
+  },
+  "find-words-that-can-be-formed-by-characters": {
+    "difficulty": "Easy",
+    "title": "Find Words That Can Be Formed by Characters"
+  },
+  "fix-names-in-a-table": {
+    "difficulty": "Easy",
+    "title": "Fix Names in a Table"
+  },
+  "flipping-an-image": {
+    "difficulty": "Easy",
+    "title": "Flipping an Image"
+  },
+  "game-play-analysis-i": {
+    "difficulty": "Easy",
+    "title": "Game Play Analysis I"
+  },
+  "generate-a-string-with-characters-that-have-odd-counts": {
+    "difficulty": "Easy",
+    "title": "Generate a String With Characters That Have Odd Counts"
+  },
+  "get-maximum-in-generated-array": {
+    "difficulty": "Easy",
+    "title": "Get Maximum in Generated Array"
+  },
+  "goal-parser-interpretation": {
+    "difficulty": "Easy",
+    "title": "Goal Parser Interpretation"
+  },
+  "greatest-english-letter-in-upper-and-lower-case": {
+    "difficulty": "Easy",
+    "title": "Greatest English Letter in Upper and Lower Case"
+  },
+  "group-sold-products-by-the-date": {
+    "difficulty": "Easy",
+    "title": "Group Sold Products By The Date"
+  },
+  "how-many-numbers-are-smaller-than-the-current-number": {
+    "difficulty": "Easy",
+    "title": "How Many Numbers Are Smaller Than the Current Number"
+  },
+  "intersection-of-multiple-arrays": {
+    "difficulty": "Easy",
+    "title": "Intersection of Multiple Arrays"
+  },
+  "intersection-of-two-arrays-ii": {
+    "difficulty": "Easy",
+    "title": "Intersection of Two Arrays II"
+  },
+  "jewels-and-stones": {
+    "difficulty": "Easy",
+    "title": "Jewels and Stones"
+  },
+  "jump-game-iii": {
+    "difficulty": "Medium",
+    "title": "Jump Game III"
+  },
+  "keep-multiplying-found-values-by-two": {
+    "difficulty": "Easy",
+    "title": "Keep Multiplying Found Values by Two"
+  },
+  "kth-distinct-string-in-an-array": {
+    "difficulty": "Easy",
+    "title": "Kth Distinct String in an Array"
+  },
+  "largest-3-same-digit-number-in-string": {
+    "difficulty": "Easy",
+    "title": "Largest 3-Same-Digit Number in String"
+  },
+  "last-stone-weight": {
+    "difficulty": "Easy",
+    "title": "Last Stone Weight"
+  },
+  "longest-common-subsequence": {
+    "difficulty": "Medium",
+    "title": "Longest Common Subsequence"
+  },
+  "lucky-numbers-in-a-matrix": {
+    "difficulty": "Easy",
+    "title": "Lucky Numbers in a Matrix"
+  },
+  "make-array-zero-by-subtracting-equal-amounts": {
+    "difficulty": "Easy",
+    "title": "Make Array Zero by Subtracting Equal Amounts"
+  },
+  "matrix-diagonal-sum": {
+    "difficulty": "Easy",
+    "title": "Matrix Diagonal Sum"
+  },
+  "maximum-depth-of-n-ary-tree": {
+    "difficulty": "Easy",
+    "title": "Maximum Depth of N-ary Tree"
+  },
+  "maximum-difference-between-increasing-elements": {
+    "difficulty": "Easy",
+    "title": "Maximum Difference Between Increasing Elements"
+  },
+  "maximum-length-of-subarray-with-positive-product": {
+    "difficulty": "Medium",
+    "title": "Maximum Length of Subarray With Positive Product"
+  },
+  "maximum-level-sum-of-a-binary-tree": {
+    "difficulty": "Medium",
+    "title": "Maximum Level Sum of a Binary Tree"
+  },
+  "maximum-number-of-pairs-in-array": {
+    "difficulty": "Easy",
+    "title": "Maximum Number of Pairs in Array"
+  },
+  "maximum-number-of-words-found-in-sentences": {
+    "difficulty": "Easy",
+    "title": "Maximum Number of Words Found in Sentences"
+  },
+  "maximum-number-of-words-you-can-type": {
+    "difficulty": "Easy",
+    "title": "Maximum Number of Words You Can Type"
+  },
+  "maximum-product-of-two-elements-in-an-array": {
+    "difficulty": "Easy",
+    "title": "Maximum Product of Two Elements in an Array"
+  },
+  "maximum-total-importance-of-roads": {
+    "difficulty": "Medium",
+    "title": "Maximum Total Importance of Roads"
+  },
+  "merge-similar-items": {
+    "difficulty": "Easy",
+    "title": "Merge Similar Items"
+  },
+  "merge-strings-alternately": {
+    "difficulty": "Easy",
+    "title": "Merge Strings Alternately"
+  },
+  "min-cost-climbing-stairs": {
+    "difficulty": "Easy",
+    "title": "Min Cost Climbing Stairs"
+  },
+  "minimize-maximum-pair-sum-in-array": {
+    "difficulty": "Medium",
+    "title": "Minimize Maximum Pair Sum in Array"
+  },
+  "minimum-bit-flips-to-convert-number": {
+    "difficulty": "Easy",
+    "title": "Minimum Bit Flips to Convert Number"
+  },
+  "minimum-cost-for-tickets": {
+    "difficulty": "Medium",
+    "title": "Minimum Cost For Tickets"
+  },
+  "minimum-difference-between-largest-and-smallest-value-in-three-moves": {
+    "difficulty": "Medium",
+    "title": "Minimum Difference Between Largest and Smallest Value in Three Moves"
+  },
+  "minimum-distance-between-bst-nodes": {
+    "difficulty": "Easy",
+    "title": "Minimum Distance Between BST Nodes"
+  },
+  "minimum-falling-path-sum": {
+    "difficulty": "Medium",
+    "title": "Minimum Falling Path Sum"
+  },
+  "minimum-operations-to-make-array-equal": {
+    "difficulty": "Medium",
+    "title": "Minimum Operations to Make Array Equal"
+  },
+  "minimum-time-to-make-rope-colorful": {
+    "difficulty": "Medium",
+    "title": "Minimum Time to Make Rope Colorful"
+  },
+  "minimum-time-visiting-all-points": {
+    "difficulty": "Easy",
+    "title": "Minimum Time Visiting All Points"
+  },
+  "n-ary-tree-preorder-traversal": {
+    "difficulty": "Easy",
+    "title": "N-ary Tree Preorder Traversal"
+  },
+  "n-repeated-element-in-size-2n-array": {
+    "difficulty": "Easy",
+    "title": "N-Repeated Element in Size 2N Array"
+  },
+  "n-th-tribonacci-number": {
+    "difficulty": "Easy",
+    "title": "N-th Tribonacci Number"
+  },
+  "number-complement": {
+    "difficulty": "Easy",
+    "title": "Number Complement"
+  },
+  "number-of-arithmetic-triplets": {
+    "difficulty": "Easy",
+    "title": "Number of Arithmetic Triplets"
+  },
+  "number-of-common-factors": {
+    "difficulty": "Easy",
+    "title": "Number of Common Factors"
+  },
+  "number-of-good-pairs": {
+    "difficulty": "Easy",
+    "title": "Number of Good Pairs"
+  },
+  "number-of-good-ways-to-split-a-string": {
+    "difficulty": "Medium",
+    "title": "Number of Good Ways to Split a String"
+  },
+  "number-of-steps-to-reduce-a-number-to-zero": {
+    "difficulty": "Easy",
+    "title": "Number of Steps to Reduce a Number to Zero"
+  },
+  "number-of-strings-that-appear-as-substrings-in-word": {
+    "difficulty": "Easy",
+    "title": "Number of Strings That Appear as Substrings in Word"
+  },
+  "number-of-students-doing-homework-at-a-given-time": {
+    "difficulty": "Easy",
+    "title": "Number of Students Doing Homework at a Given Time"
+  },
+  "number-of-ways-to-split-array": {
+    "difficulty": "Medium",
+    "title": "Number of Ways to Split Array"
+  },
+  "optimal-partition-of-string": {
+    "difficulty": "Medium",
+    "title": "Optimal Partition of String"
+  },
+  "partition-array-for-maximum-sum": {
+    "difficulty": "Medium",
+    "title": "Partition Array for Maximum Sum"
+  },
+  "patients-with-a-condition": {
+    "difficulty": "Easy",
+    "title": "Patients With a Condition"
+  },
+  "peak-index-in-a-mountain-array": {
+    "difficulty": "Medium",
+    "title": "Peak Index in a Mountain Array"
+  },
+  "percentage-of-letter-in-string": {
+    "difficulty": "Easy",
+    "title": "Percentage of Letter in String"
+  },
+  "range-sum-of-bst": {
+    "difficulty": "Easy",
+    "title": "Range Sum of BST"
+  },
+  "rearrange-products-table": {
+    "difficulty": "Easy",
+    "title": "Rearrange Products Table"
+  },
+  "recyclable-and-low-fat-products": {
+    "difficulty": "Easy",
+    "title": "Recyclable and Low Fat Products"
+  },
+  "relative-sort-array": {
+    "difficulty": "Easy",
+    "title": "Relative Sort Array"
+  },
+  "remove-outermost-parentheses": {
+    "difficulty": "Easy",
+    "title": "Remove Outermost Parentheses"
+  },
+  "replace-all-digits-with-characters": {
+    "difficulty": "Easy",
+    "title": "Replace All Digits with Characters"
+  },
+  "replace-elements-with-greatest-element-on-right-side": {
+    "difficulty": "Easy",
+    "title": "Replace Elements with Greatest Element on Right Side"
+  },
+  "reverse-prefix-of-word": {
+    "difficulty": "Easy",
+    "title": "Reverse Prefix of Word"
+  },
+  "richest-customer-wealth": {
+    "difficulty": "Easy",
+    "title": "Richest Customer Wealth"
+  },
+  "root-equals-sum-of-children": {
+    "difficulty": "Easy",
+    "title": "Root Equals Sum of Children"
+  },
+  "rotate-string": {
+    "difficulty": "Easy",
+    "title": "Rotate String"
+  },
+  "sales-analysis-iii": {
+    "difficulty": "Easy",
+    "title": "Sales Analysis III"
+  },
+  "score-of-parentheses": {
+    "difficulty": "Medium",
+    "title": "Score of Parentheses"
+  },
+  "search-suggestions-system": {
+    "difficulty": "Medium",
+    "title": "Search Suggestions System"
+  },
+  "sender-with-largest-word-count": {
+    "difficulty": "Medium",
+    "title": "Sender With Largest Word Count"
+  },
+  "shortest-path-in-binary-matrix": {
+    "difficulty": "Medium",
+    "title": "Shortest Path in Binary Matrix"
+  },
+  "shuffle-string": {
+    "difficulty": "Easy",
+    "title": "Shuffle String"
+  },
+  "shuffle-the-array": {
+    "difficulty": "Easy",
+    "title": "Shuffle the Array"
+  },
+  "sign-of-the-product-of-an-array": {
+    "difficulty": "Easy",
+    "title": "Sign of the Product of an Array"
+  },
+  "smallest-even-multiple": {
+    "difficulty": "Easy",
+    "title": "Smallest Even Multiple"
+  },
+  "smallest-range-i": {
+    "difficulty": "Easy",
+    "title": "Smallest Range I"
+  },
+  "smallest-string-starting-from-leaf": {
+    "difficulty": "Medium",
+    "title": "Smallest String Starting From Leaf"
+  },
+  "sort-array-by-parity": {
+    "difficulty": "Easy",
+    "title": "Sort Array By Parity"
+  },
+  "sort-array-by-parity-ii": {
+    "difficulty": "Easy",
+    "title": "Sort Array By Parity II"
+  },
+  "sort-integers-by-the-number-of-1-bits": {
+    "difficulty": "Easy",
+    "title": "Sort Integers by The Number of 1 Bits"
+  },
+  "sort-the-people": {
+    "difficulty": "Easy",
+    "title": "Sort the People"
+  },
+  "sorting-the-sentence": {
+    "difficulty": "Easy",
+    "title": "Sorting the Sentence"
+  },
+  "split-a-string-in-balanced-strings": {
+    "difficulty": "Easy",
+    "title": "Split a String in Balanced Strings"
+  },
+  "squares-of-a-sorted-array": {
+    "difficulty": "Easy",
+    "title": "Squares of a Sorted Array"
+  },
+  "strictly-palindromic-number": {
+    "difficulty": "Medium",
+    "title": "Strictly Palindromic Number"
+  },
+  "strong-password-checker-ii": {
+    "difficulty": "Easy",
+    "title": "Strong Password Checker II"
+  },
+  "substrings-of-size-three-with-distinct-characters": {
+    "difficulty": "Easy",
+    "title": "Substrings of Size Three with Distinct Characters"
+  },
+  "subtract-the-product-and-sum-of-digits-of-an-integer": {
+    "difficulty": "Easy",
+    "title": "Subtract the Product and Sum of Digits of an Integer"
+  },
+  "sum-of-all-odd-length-subarrays": {
+    "difficulty": "Easy",
+    "title": "Sum of All Odd Length Subarrays"
+  },
+  "sum-of-root-to-leaf-binary-numbers": {
+    "difficulty": "Easy",
+    "title": "Sum of Root To Leaf Binary Numbers"
+  },
+  "sum-of-unique-elements": {
+    "difficulty": "Easy",
+    "title": "Sum of Unique Elements"
+  },
+  "tenth-line": {
+    "difficulty": "Easy",
+    "title": "Tenth Line"
+  },
+  "the-k-weakest-rows-in-a-matrix": {
+    "difficulty": "Easy",
+    "title": "The K Weakest Rows in a Matrix"
+  },
+  "the-latest-login-in-2020": {
+    "difficulty": "Easy",
+    "title": "The Latest Login in 2020"
+  },
+  "three-consecutive-odds": {
+    "difficulty": "Easy",
+    "title": "Three Consecutive Odds"
+  },
+  "time-needed-to-buy-tickets": {
+    "difficulty": "Easy",
+    "title": "Time Needed to Buy Tickets"
+  },
+  "to-lower-case": {
+    "difficulty": "Easy",
+    "title": "To Lower Case"
+  },
+  "toeplitz-matrix": {
+    "difficulty": "Easy",
+    "title": "Toeplitz Matrix"
+  },
+  "top-travellers": {
+    "difficulty": "Easy",
+    "title": "Top Travellers"
+  },
+  "transpose-matrix": {
+    "difficulty": "Easy",
+    "title": "Transpose Matrix"
+  },
+  "truncate-sentence": {
+    "difficulty": "Easy",
+    "title": "Truncate Sentence"
+  },
+  "two-city-scheduling": {
+    "difficulty": "Medium",
+    "title": "Two City Scheduling"
+  },
+  "two-furthest-houses-with-different-colors": {
+    "difficulty": "Easy",
+    "title": "Two Furthest Houses With Different Colors"
+  },
+  "two-out-of-three": {
+    "difficulty": "Easy",
+    "title": "Two Out of Three"
+  },
+  "uncommon-words-from-two-sentences": {
+    "difficulty": "Easy",
+    "title": "Uncommon Words from Two Sentences"
+  },
+  "unique-morse-code-words": {
+    "difficulty": "Easy",
+    "title": "Unique Morse Code Words"
+  },
+  "unique-number-of-occurrences": {
+    "difficulty": "Easy",
+    "title": "Unique Number of Occurrences"
+  },
+  "univalued-binary-tree": {
+    "difficulty": "Easy",
+    "title": "Univalued Binary Tree"
+  },
+  "user-activity-for-the-past-30-days-i": {
+    "difficulty": "Easy",
+    "title": "User Activity for the Past 30 Days I"
+  },
+  "verifying-an-alien-dictionary": {
+    "difficulty": "Easy",
+    "title": "Verifying an Alien Dictionary"
+  },
+  "word-frequency": {
+    "difficulty": "Medium",
+    "title": "Word Frequency"
+  },
+  "word-subsets": {
+    "difficulty": "Medium",
+    "title": "Word Subsets"
+  }
+}
