@@ -34,11 +34,21 @@ jobs:
           SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSRF: ${{ secrets.LEETCODE_CSRF_TOKEN }}
         run: |
-          if [ -n "$SESSION" ] && [ -n "$CSRF" ]; then
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-          else
+          if [ -z "$SESSION" ] || [ -z "$CSRF" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "::notice::LEETCODE_SESSION / LEETCODE_CSRF_TOKEN are not set — nothing to sync."
+            exit 0
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+          # A malformed paste fails downstream as an opaque
+          # "submissions is not iterable" TypeError, so say something useful here
+          # instead. Lengths only -- the values themselves are never printed.
+          if [ "${#SESSION}" -lt 50 ]; then
+            echo "::warning::LEETCODE_SESSION is only ${#SESSION} characters, which looks truncated. The cookie is normally several hundred. Check for a stray 'LEETCODE_SESSION=' prefix, a trailing ';', or a newline."
+          fi
+          if [ "${#CSRF}" -lt 20 ]; then
+            echo "::warning::LEETCODE_CSRF_TOKEN is only ${#CSRF} characters, which looks truncated. The csrftoken cookie is normally 32-64 characters."
           fi
 
       - name: Sync accepted submissions
@@ -49,6 +59,18 @@ jobs:
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           commit-header: "solve"
+
+      # The action throws a bare "submissions is not iterable" when LeetCode returns
+      # a 200 with no submission list, which it does for a rejected session. Upstream
+      # has this open as joshcai/leetcode-sync#72; until it lands, translate it here.
+      - name: Explain a credential failure
+        if: failure() && steps.guard.outputs.ready == 'true'
+        run: |
+          echo "::error::Sync failed. If the log shows 'submissions is not iterable', LeetCode"
+          echo "::error::rejected the session — the cookies are wrong or have expired."
+          echo "::error::Re-copy them from leetcode.com (DevTools > Application > Cookies) and run:"
+          echo "::error::  pbpaste | tr -d '[:space:]' | gh secret set LEETCODE_SESSION -R ${{ github.repository }}"
+          echo "::error::  pbpaste | tr -d '[:space:]' | gh secret set LEETCODE_CSRF_TOKEN -R ${{ github.repository }}"
 
       # The sync commits through the GitHub API, so this checkout is behind once it
       # finishes -- rebuilding without pulling would write the index from stale state.
