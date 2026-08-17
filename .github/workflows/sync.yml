@@ -52,8 +52,11 @@ jobs:
           # A malformed paste fails downstream as an opaque
           # "submissions is not iterable" TypeError, so say something useful here
           # instead. Lengths only -- the values themselves are never printed.
-          if [ "${#SESSION}" -lt 50 ]; then
-            echo "::warning::LEETCODE_SESSION is only ${#SESSION} characters, which looks truncated. The cookie is normally several hundred. Check for a stray 'LEETCODE_SESSION=' prefix, a trailing ';', or a newline."
+          # 300 rather than something lenient: the DevTools cookie grid shows a
+          # shortened value, and copying that cell yields a plausible-looking
+          # hundred-odd characters that pass any looser floor and then get rejected.
+          if [ "${#SESSION}" -lt 300 ]; then
+            echo "::warning::LEETCODE_SESSION is only ${#SESSION} characters. The real cookie is 600+. The DevTools cookie table truncates what it displays — right-click the LEETCODE_SESSION row and use Copy value, or copy from the detail pane below the table, rather than selecting the cell."
           fi
           if [ "${#CSRF}" -lt 20 ]; then
             echo "::warning::LEETCODE_CSRF_TOKEN is only ${#CSRF} characters, which looks truncated. The csrftoken cookie is normally 32-64 characters."
