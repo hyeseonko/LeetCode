@@ -1,8 +1,9 @@
 {
-  "solved": 400,
+  "solved": 602,
   "by_language": {
-    "Python": 367,
-    "SQL": 33
+    "Python": 553,
+    "SQL": 55,
+    "sh": 2
   },
   "by_difficulty": {
     "Easy": 277,
