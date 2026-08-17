@@ -1,0 +1,74 @@
+name: sync leetcode
+
+# Pulls accepted submissions from LeetCode into this repo, then rebuilds the index.
+#
+# Needs two repository secrets, both read from leetcode.com cookies:
+#   LEETCODE_SESSION, LEETCODE_CSRF_TOKEN
+# Without them every run exits early instead of failing, so an unconfigured repo
+# does not mail a failure notice every few hours.
+
+on:
+  schedule:
+    # Every 6 hours, plus one at 21:30 KST so the evening's work is in the repo
+    # before the 22:00 output check looks for it.
+    - cron: "0 */6 * * *"
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-leetcode
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check whether LeetCode credentials are configured
+        id: guard
+        env:
+          SESSION: ${{ secrets.LEETCODE_SESSION }}
+          CSRF: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+        run: |
+          if [ -n "$SESSION" ] && [ -n "$CSRF" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::LEETCODE_SESSION / LEETCODE_CSRF_TOKEN are not set — nothing to sync."
+          fi
+
+      - name: Sync accepted submissions
+        if: steps.guard.outputs.ready == 'true'
+        uses: joshcai/leetcode-sync@v1.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+          leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          commit-header: "solve"
+
+      # The sync commits through the GitHub API, so this checkout is behind once it
+      # finishes -- rebuilding without pulling would write the index from stale state.
+      # A push made with GITHUB_TOKEN also does not trigger other workflows, which is
+      # why the index is rebuilt here rather than left to the `rebuild index` workflow.
+      - name: Rebuild the index
+        if: steps.guard.outputs.ready == 'true'
+        run: |
+          git pull --ff-only origin main
+          python3 scripts/build_readme.py
+
+      - name: Commit the index
+        if: steps.guard.outputs.ready == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md stats.json
+          if git diff --cached --quiet; then
+            echo "index already current"
+          else
+            git commit -m "index: rebuild after sync"
+            git push
+          fi
