@@ -41,6 +41,14 @@ jobs:
           fi
           echo "ready=true" >> "$GITHUB_OUTPUT"
 
+          # Lengths only, never the values. A csrftoken as long as the session cookie
+          # means the wrong thing was pasted into it -- a mix-up the length floor below
+          # cannot catch, and the one that produces an otherwise inexplicable rejection.
+          echo "::notice::LEETCODE_SESSION is ${#SESSION} chars, LEETCODE_CSRF_TOKEN is ${#CSRF} chars."
+          if [ "${#CSRF}" -gt 200 ]; then
+            echo "::warning::LEETCODE_CSRF_TOKEN is ${#CSRF} chars, far longer than the 32-64 that cookie normally is. The session cookie was probably pasted into it by mistake."
+          fi
+
           # A malformed paste fails downstream as an opaque
           # "submissions is not iterable" TypeError, so say something useful here
           # instead. Lengths only -- the values themselves are never printed.
