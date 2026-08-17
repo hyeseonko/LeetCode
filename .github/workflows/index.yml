@@ -1,0 +1,35 @@
+name: rebuild index
+
+on:
+  push:
+    branches: [main]
+    # README.md and stats.json are written by this job; triggering on them loops.
+    paths-ignore:
+      - README.md
+      - stats.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-index
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/build_readme.py
+      - name: Commit if the index changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md stats.json
+          if git diff --cached --quiet; then
+            echo "index already current"
+          else
+            git commit -m "index: rebuild from solutions on disk"
+            git push
+          fi

@@ -1,0 +1,12 @@
+{
+  "solved": 400,
+  "by_language": {
+    "Python": 367,
+    "SQL": 33
+  },
+  "by_difficulty": {
+    "Easy": 277,
+    "Medium": 116,
+    "Hard": 4
+  }
+}
