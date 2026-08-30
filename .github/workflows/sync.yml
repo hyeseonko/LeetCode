@@ -9,9 +9,15 @@ name: sync leetcode
 
 on:
   schedule:
-    # Every 6 hours, plus one at 21:30 KST so the evening's work is in the repo
+    # Every 2 hours, plus one at 21:30 KST so the evening's work is in the repo
     # before the 22:00 output check looks for it.
-    - cron: "0 */6 * * *"
+    #
+    # Was every 6 hours until 2026-08-31. At that spacing a problem solved in the
+    # morning stayed missing from the repo until the afternoon, which reads as
+    # "the sync is broken" when it is only waiting. Two hours keeps the wait short;
+    # the job is a no-op when there is nothing new, and Actions minutes are free on
+    # a public repo.
+    - cron: "0 */2 * * *"
     - cron: "30 12 * * *"
   workflow_dispatch:
 
